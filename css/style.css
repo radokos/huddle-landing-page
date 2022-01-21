@@ -1,0 +1,188 @@
+/**
+ * GENERAL
+ */
+ html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+img{
+	max-width:100%;
+	
+	vertical-align: middle;
+}
+
+body {
+	font-size: 100%;
+	font-family: 'Trebuchet MS', Verdana, serif;
+	margin:0;
+    width: 100vw;
+     height: 100vh;
+	 background: #674bb1;
+}
+
+/*main*/
+header {
+	align-self: center;
+}
+nav a {
+	display: block;
+	background: url('../images/logo.svg') no-repeat;
+	height: 3em;
+	text-indent: -5000px;
+	margin-left: 38%;
+    background-size: contain;
+	width: 10em;
+}
+
+
+main{
+	background: url('../images/bg-desktop.svg') center no-repeat;
+	background-size: contain;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+  }
+ 
+
+section{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+section article,
+section aside{
+	width: 42%;
+}
+
+article h1 {
+	color: white;
+	font-size: 1.6em;
+	font-weight: bold;
+	line-height: 1.4em;
+
+}
+
+article p{
+	color: #ffffffbd;
+	line-height: 1.2em;
+	padding-bottom: 1.4em;
+}
+
+article a{
+	padding: 0.7em 2.2em;
+	background-color: white;
+	color: #7c6ea3;
+	border-radius: 1.8em;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-size: 0.8em;
+}
+
+footer{
+	width: 95%;
+	position: absolute;
+	z-index: 2;
+	bottom: 4em;
+	text-align: right;
+}
+
+svg{
+	stroke: white;
+	fill: white;
+}
+
+/*active*/
+
+article a:hover,
+article a:active{
+	background-color: #e980e7;
+	color: white;
+}
+
+footer svg:active,
+footer svg:hover{
+	stroke:#e980e7;
+	fill: #e980e7;
+
+}
+
+/*media queries*/
+
+@media ( max-width:800px){
+     
+	article h1{
+		margin-top: 0.2em;
+	}
+   	
+   }
+
+   @media ( max-width:710px){
+          
+	   section article,
+	   section aside{
+		   width: 45%;
+	   }
+       
+	   footer{
+		bottom: 0.5em;
+	   }
+   }	
+
+   @media ( max-width:640px){
+    
+   main{
+	   display: initial;
+   }
+    header a{
+         margin-left: 0px;
+		 margin-left: 12.5% ;
+		 margin-top: 1.2em;
+		 margin-bottom: 1em;
+	}
+   section{
+	   display: initial;
+   }
+   section article,
+   section aside{
+	   width: 75%;
+	   margin: 0 auto;
+   }
+
+    article h1{
+		text-align: center;
+		margin-top: 1.2em;
+	}
+	article p{
+		text-align: center;
+		padding-bottom: 0.3em;
+	}
+
+	article a {
+		display: block;
+		width: 50%;
+		text-align: center;
+		margin: 0.5em auto;
+		margin-bottom: 0.5em;
+	}
+  footer{
+	  position: initial;
+	  text-align: center;
+	  margin: 1em auto;
+	  width: 75%;
+	  padding: 0.9em;
+  }
+}
+
+@media ( max-width:530px){
+    section article,
+   section aside{
+	   width: 90%;
+   }
+   nav a{
+	   margin-left: 4.5%;
+   }
+}
